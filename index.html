@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TELC B2 – Übungsaufgaben</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>TELC B2 – Übungsaufgaben</h1>
+    <p class="subtitle">Wählen Sie einen Bereich aus.</p>
+    <div class="nav-list" id="nav-list"></div>
+  </div>
+
+  <!-- Registry bootstrap (must be first) -->
+  <script src="js/registry.js"></script>
+
+  <!-- ── Section configs (add one line per new section) ── -->
+  <script src="sections/leseverstehen-teil1/config.js"></script>
+  <!-- <script src="sections/leseverstehen-teil2/config.js"></script> -->
+
+  <script>
+    var list = document.getElementById('nav-list');
+    window.REGISTRY.forEach(function(section) {
+      var a = document.createElement('a');
+      a.className = 'nav-card';
+      a.href = 'section.html?id=' + section.id;
+      a.innerHTML =
+        '<div class="nav-card-title">' + section.title + '</div>' +
+        '<div class="nav-card-meta">'  + section.subtitle + '</div>';
+      list.appendChild(a);
+    });
+  </script>
+</body>
+</html>

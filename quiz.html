@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TELC B2 – Quiz</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="card">
+    <nav class="breadcrumb" id="breadcrumb"></nav>
+    <h1 id="quiz-title"></h1>
+    <p class="subtitle" id="quiz-subtitle"></p>
+
+    <div id="quiz-area"></div>
+
+    <div id="score-box">
+      <h2 id="score-title"></h2>
+      <p  id="score-desc"></p>
+      <button onclick="restartAll()">Nochmal versuchen</button>
+    </div>
+  </div>
+
+  <!-- Registry bootstrap (must be first) -->
+  <script src="js/registry.js"></script>
+
+  <!-- ── Section configs (add one line per new section) ── -->
+  <script src="sections/leseverstehen-teil1/config.js"></script>
+  <!-- <script src="sections/leseverstehen-teil2/config.js"></script> -->
+
+  <script src="js/quiz-engine.js"></script>
+  <script>
+    (function () {
+      var params    = new URLSearchParams(window.location.search);
+      var quizId    = params.get('quiz');
+      var sectionId = params.get('section');
+
+      // Build breadcrumb
+      var bc      = document.getElementById('breadcrumb');
+      var section = sectionId && window.REGISTRY.find(function(s) { return s.id === sectionId; });
+      var topic   = section   && section.topics.find(function(t) { return t.quizId === quizId; });
+
+      bc.innerHTML =
+        '<a href="index.html">TELC B2</a>' +
+        (section ? '<span class="breadcrumb-sep">›</span><a href="section.html?id=' + sectionId + '">' + section.title + '</a>' : '') +
+        (topic   ? '<span class="breadcrumb-sep">›</span><span>' + topic.title + '</span>' : '');
+
+      // Find quiz data file from registry
+      var meta = null;
+      window.REGISTRY.forEach(function(s) {
+        s.topics.forEach(function(t) {
+          if (t.quizId === quizId) meta = t;
+        });
+      });
+
+      if (!meta) {
+        document.querySelector('.card').innerHTML =
+          '<p style="color:#b91c1c">Quiz nicht gefunden. <a href="index.html">Zurück</a></p>';
+        return;
+      }
+
+      var script     = document.createElement('script');
+      script.src     = meta.dataFile;
+      script.onload  = function() { initQuiz(QUIZ_DATA); };
+      script.onerror = function() {
+        document.getElementById('quiz-area').innerHTML =
+          '<p style="color:#b91c1c">Fehler beim Laden der Quiz-Daten.</p>';
+      };
+      document.head.appendChild(script);
+    })();
+  </script>
+</body>
+</html>

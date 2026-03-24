@@ -1,0 +1,278 @@
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Layout ──────────────────────────────────────────────── */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  max-width: 820px;
+  width: 100%;
+  padding: 36px 40px;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+h1 {
+  font-size: 1.3rem;
+  color: #1a237e;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+/* ── Breadcrumb ──────────────────────────────────────────── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover { text-decoration: underline; }
+
+.breadcrumb span     { color: #94a3b8; }
+.breadcrumb-sep      { color: #cbd5e1; }
+
+/* ── Navigation Cards (index / section pages) ────────────── */
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.nav-card {
+  display: block;
+  padding: 18px 22px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.18s, background 0.18s;
+}
+
+.nav-card:hover {
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+.nav-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.nav-card-meta {
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+/* ── Progress & Navigation ───────────────────────────────── */
+.progress {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.nav button {
+  padding: 7px 18px;
+  font-size: 0.85rem;
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.nav button:hover:not(:disabled) {
+  background: #cbd5e1;
+}
+
+/* ── Reading Text ────────────────────────────────────────── */
+.text-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px 24px;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 28px;
+  white-space: pre-wrap;
+}
+
+/* ── Question & Options ──────────────────────────────────── */
+.question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #334155;
+  user-select: none;
+  transition: border-color 0.18s, background 0.18s;
+}
+
+.option:hover:not(.disabled) {
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+/* Option states */
+.option.selected  { border-color: #6366f1; background: #eef2ff; }
+.option.correct   { border-color: #16a34a; background: #f0fdf4; color: #15803d; }
+.option.wrong     { border-color: #dc2626; background: #fef2f2; color: #b91c1c; }
+.option.disabled  { cursor: default; }
+
+/* Letter badge */
+.letter {
+  min-width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.18s, color 0.18s;
+}
+
+.option.selected .letter { background: #6366f1; color: #fff; }
+.option.correct  .letter { background: #16a34a; color: #fff; }
+.option.wrong    .letter { background: #dc2626; color: #fff; }
+
+/* ── Buttons ─────────────────────────────────────────────── */
+button {
+  padding: 11px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.18s;
+}
+
+button:disabled { opacity: 0.35; cursor: default; }
+
+/* ── Quiz Footer (submit bar) ────────────────────────────── */
+.quiz-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.answered-count {
+  font-size: 0.85rem;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#btn-submit {
+  background: #6366f1;
+  color: #fff;
+  padding: 11px 32px;
+}
+
+#btn-submit:hover:not(:disabled) { opacity: 0.88; }
+
+/* ── Review dots ─────────────────────────────────────────── */
+.dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.dot:hover       { transform: scale(1.25); }
+.dot-ok          { background: #16a34a; }
+.dot-nok         { background: #dc2626; }
+.dot-active      { outline: 3px solid #6366f1; outline-offset: 2px; }
+
+/* ── Feedback Message ────────────────────────────────────── */
+.feedback {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: none;
+}
+
+.feedback.show { display: block; }
+.feedback.ok   { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+.feedback.nok  { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
+
+/* ── Score Box ───────────────────────────────────────────── */
+#score-box {
+  display: none;
+  background: #1a237e;
+  color: #fff;
+  border-radius: 10px;
+  padding: 28px 32px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+#score-box h2       { font-size: 1.4rem; margin-bottom: 8px; }
+#score-box p        { font-size: 1rem; opacity: 0.85; }
+#score-box button   { margin-top: 18px; background: #fff; color: #1a237e; }

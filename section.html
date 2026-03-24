@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TELC B2</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="card">
+    <nav class="breadcrumb">
+      <a href="index.html">TELC B2</a>
+      <span class="breadcrumb-sep">›</span>
+      <span id="bc-section"></span>
+    </nav>
+
+    <h1 id="section-title"></h1>
+    <p class="subtitle" id="section-subtitle"></p>
+    <div class="nav-list" id="topic-list"></div>
+  </div>
+
+  <!-- Registry bootstrap (must be first) -->
+  <script src="js/registry.js"></script>
+
+  <!-- ── Section configs (add one line per new section) ── -->
+  <script src="sections/leseverstehen-teil1/config.js"></script>
+  <!-- <script src="sections/leseverstehen-teil2/config.js"></script> -->
+
+  <script>
+    var params    = new URLSearchParams(window.location.search);
+    var sectionId = params.get('id');
+    var section   = window.REGISTRY.find(function(s) { return s.id === sectionId; });
+
+    if (!section) {
+      document.querySelector('.card').innerHTML =
+        '<p style="color:#b91c1c">Bereich nicht gefunden. <a href="index.html">Zurück</a></p>';
+    } else {
+      document.title = 'TELC B2 – ' + section.title;
+      document.getElementById('bc-section').textContent      = section.title;
+      document.getElementById('section-title').textContent   = section.title;
+      document.getElementById('section-subtitle').textContent = section.subtitle;
+
+      var list = document.getElementById('topic-list');
+      section.topics.forEach(function(topic) {
+        var a = document.createElement('a');
+        a.className = 'nav-card';
+        a.href = 'quiz.html?quiz=' + topic.quizId + '&section=' + sectionId;
+        a.innerHTML =
+          '<div class="nav-card-title">' + topic.title + '</div>' +
+          '<div class="nav-card-meta">'  + topic.description + '</div>';
+        list.appendChild(a);
+      });
+    }
+  </script>
+</body>
+</html>
