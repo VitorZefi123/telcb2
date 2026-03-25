@@ -38,6 +38,8 @@ function render() {
 
     <div class="text-box">${q.text}</div>
 
+    ${quizData.infotexts ? buildInfotexts() : ''}
+
     <p class="question">${quizData.questionLabel}</p>
     <div class="options" id="options-list"></div>
 
@@ -60,6 +62,22 @@ function render() {
   `;
 
   renderOptions();
+}
+
+function buildInfotexts() {
+  const items = quizData.infotexts
+    .filter(it => it.letter !== 'X')
+    .map(it => `
+      <details class="infotext-item">
+        <summary><span class="infotext-letter">${it.letter}</span>${it.title}</summary>
+        <div class="infotext-content">${it.content}</div>
+      </details>
+    `).join('');
+  return `
+    <div class="infotexts-panel">
+      <div class="infotexts-header">Infotexte A – L &nbsp;▾ aufklappen zum Lesen</div>
+      ${items}
+    </div>`;
 }
 
 function buildFeedback(index) {
