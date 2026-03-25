@@ -45,5 +45,33 @@ window.REGISTRY.push({
       quizId:      'leseverstehen-teil3--uebersetzungen',
       dataFile:    'sections/leseverstehen-teil3/uebersetzungen/quiz-data.js',
     },
+    {
+      id:          'bankkaufmann',
+      title:       'BANKKAUFMANN',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--bankkaufmann',
+      dataFile:    'sections/leseverstehen-teil3/bankkaufmann/quiz-data.js',
+    },
+    {
+      id:          'koerpersprache',
+      title:       'KÖRPERSPRACHE',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--koerpersprache',
+      dataFile:    'sections/leseverstehen-teil3/koerpersprache/quiz-data.js',
+    },
+    {
+      id:          'gaerten-der-welt',
+      title:       'GÄRTEN DER WELT',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--gaerten-der-welt',
+      dataFile:    'sections/leseverstehen-teil3/gaerten-der-welt/quiz-data.js',
+    },
+    {
+      id:          'kurort',
+      title:       'KURORT',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--kurort',
+      dataFile:    'sections/leseverstehen-teil3/kurort/quiz-data.js',
+    },
   ],
 });
