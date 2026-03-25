@@ -83,7 +83,7 @@ const QUIZ_DATA = {
       ],
       correct: 'B',
       explanation:
-        'Der Text sagt: „Für die Stadtoberen ist heute die ‚Ein-Mann-Show' die beste Werbung für Unna." Option A ist nicht belegt. Option C ist falsch: „einen weiteren Teilnehmer am Zug duldet der Karnevalsprinz nicht."',
+        'Der Text sagt: „Für die Stadtoberen ist heute die ‚Ein-Mann-Show’ die beste Werbung für Unna." Option A ist nicht belegt. Option C ist falsch: „einen weiteren Teilnehmer am Zug duldet der Karnevalsprinz nicht."',
     },
     {
       id: 10,

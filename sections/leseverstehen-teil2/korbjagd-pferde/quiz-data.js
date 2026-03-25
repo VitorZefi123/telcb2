@@ -75,7 +75,7 @@ const QUIZ_DATA = {
       ],
       correct: 'B',
       explanation:
-        'Der Text sagt: „Alles andere wird – inklusive Vierbeiner – bei Bedarf gestellt. ‚Natürlich können auch eigene Pferde mitgebracht werden.'" Ein eigenes Pferd ist möglich, aber nicht nötig. Option A ist falsch (Pferde werden gestellt). Option C ist falsch (es ist optional, nicht Pflicht).',
+        'Der Text sagt: „Alles andere wird – inklusive Vierbeiner – bei Bedarf gestellt. ‚Natürlich können auch eigene Pferde mitgebracht werden.’" Ein eigenes Pferd ist möglich, aber nicht nötig. Option A ist falsch (Pferde werden gestellt). Option C ist falsch (es ist optional, nicht Pflicht).',
     },
     {
       id: 9,
