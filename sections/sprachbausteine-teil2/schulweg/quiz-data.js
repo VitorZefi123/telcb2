@@ -25,13 +25,16 @@ function buildText(activeGap) {
 
 <p>So lernt das Kind, sich ${gap(39)} im Straßenverkehr zu verhalten und selbstständig ${gap(40)} zu finden. Und die Erwachsenen können sicher sein, dass ihr Kind zumindestens auf die Standardsituationen vorbereitet ist.</p>
 
-<hr style="margin:1em 0;border-color:#cbd5e1"/>
-<div style="font-size:0.82em;color:#475569;display:grid;grid-template-columns:repeat(3,1fr);gap:4px 16px">
-  <span><strong>A</strong> BEMÜHEN</span><span><strong>F</strong> KONZENTRIEREN</span><span><strong>K</strong> SCHON</span>
-  <span><strong>B</strong> FÜR</span><span><strong>G</strong> KRITISCHE</span><span><strong>L</strong> SELBST</span>
-  <span><strong>C</strong> DESHALB</span><span><strong>H</strong> LÖSUNGEN</span><span><strong>M</strong> STATT</span>
-  <span><strong>D</strong> DOCH</span><span><strong>I</strong> NICHT</span><span><strong>N</strong> SELBSTBEWUSST</span>
-  <span><strong>E</strong> HILFREICH</span><span><strong>J</strong> PROBLEME</span><span><strong>O</strong> VERHALTEN</span>
+<hr style="margin:1.2em 0;border-color:#cbd5e1"/>
+<p style="font-size:0.78rem;font-weight:700;color:#94a3b8;letter-spacing:0.08em;margin-bottom:10px;font-family:sans-serif">WÖRTERKASTEN</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+  ${['A·BEMÜHEN','B·FÜR','C·DESHALB','D·DOCH','E·HILFREICH','F·KONZENTRIEREN','G·KRITISCHE','H·LÖSUNGEN','I·NICHT','J·PROBLEME','K·SCHON','L·SELBST','M·STATT','N·SELBSTBEWUSST','O·VERHALTEN'].map(w => {
+    const [letter, word] = w.split('·');
+    return `<span style="display:inline-flex;align-items:center;gap:5px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:4px 12px;font-family:sans-serif;font-size:0.82rem;white-space:nowrap">
+      <span style="background:#6366f1;color:#fff;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:0.75rem;flex-shrink:0">${letter}</span>
+      <span style="color:#334155;font-weight:500">${word}</span>
+    </span>`;
+  }).join('')}
 </div>
 </div>`;
 }
