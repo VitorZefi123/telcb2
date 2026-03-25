@@ -49,11 +49,13 @@ function render() {
           ? buildDotRow()
           : `${answeredCount} von ${total} beantwortet`}
       </span>
-      ${!submitted
-        ? `<button id="btn-submit" onclick="submitAll()">
-             Abgeben ✓
-           </button>`
-        : ''}
+      <div class="footer-actions">
+        <button class="btn-nav-icon" onclick="navigate(-1)" ${current === 0 ? 'disabled' : ''} title="Zurück">&#8592;</button>
+        ${!submitted
+          ? `<button id="btn-submit" onclick="submitAll()">Abgeben ✓</button>`
+          : ''}
+        <button class="btn-nav-icon" onclick="navigate(1)" ${current === total - 1 ? 'disabled' : ''} title="Weiter">&#8594;</button>
+      </div>
     </div>
   `;
 
