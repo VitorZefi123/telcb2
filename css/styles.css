@@ -277,3 +277,12 @@ button:disabled { opacity: 0.35; cursor: default; }
 #score-box h2       { font-size: 1.4rem; margin-bottom: 8px; }
 #score-box p        { font-size: 1rem; opacity: 0.85; }
 #score-box button   { margin-top: 18px; background: #fff; color: #1a237e; }
+
+/* ── Author footer ───────────────────────────────────────── */
+.author-footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  padding: 20px 0 4px;
+  width: 100%;
+}
