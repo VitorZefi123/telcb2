@@ -246,6 +246,7 @@ button:disabled { opacity: 0.35; cursor: default; }
 .dot:hover       { transform: scale(1.25); }
 .dot-ok          { background: #16a34a; }
 .dot-nok         { background: #dc2626; }
+.dot-skip        { background: #94a3b8; }
 .dot-active      { outline: 3px solid #6366f1; outline-offset: 2px; }
 
 /* ── Feedback Message ────────────────────────────────────── */

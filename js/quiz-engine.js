@@ -26,7 +26,6 @@ function render() {
   const q             = quizData.questions[current];
   const total         = quizData.questions.length;
   const answeredCount = answers.filter(a => a !== null).length;
-  const allAnswered   = answeredCount === total;
   const area          = document.getElementById('quiz-area');
 
   area.innerHTML = `
@@ -51,7 +50,7 @@ function render() {
           : `${answeredCount} von ${total} beantwortet`}
       </span>
       ${!submitted
-        ? `<button id="btn-submit" onclick="submitAll()" ${allAnswered ? '' : 'disabled'}>
+        ? `<button id="btn-submit" onclick="submitAll()">
              Abgeben ✓
            </button>`
         : ''}
@@ -64,20 +63,22 @@ function render() {
 function buildFeedback(index) {
   const q         = quizData.questions[index];
   const sel       = answers[index];
-  const isCorrect = sel === q.correct;
+  const isCorrect  = sel === q.correct;
+  const unanswered = sel === null;
   return `
     <div class="feedback show ${isCorrect ? 'ok' : 'nok'}">
       ${isCorrect
         ? `✓ Richtig! <strong>${q.correct}</strong> ist die beste Überschrift. <em>${q.explanation}</em>`
-        : `✗ Falsch. Die richtige Antwort ist <strong>${q.correct}</strong>. <em>${q.explanation}</em>`}
+        : `✗ ${unanswered ? 'Nicht beantwortet.' : 'Falsch.'} Die richtige Antwort ist <strong>${q.correct}</strong>. <em>${q.explanation}</em>`}
     </div>`;
 }
 
 function buildDotRow() {
   return quizData.questions.map((q, i) => {
-    const isCorrect = answers[i] === q.correct;
-    const active    = i === current ? ' dot-active' : '';
-    return `<span class="dot ${isCorrect ? 'dot-ok' : 'dot-nok'}${active}" onclick="jumpTo(${i})" title="Aufgabe ${i + 1}"></span>`;
+    const isCorrect  = answers[i] === q.correct;
+    const active     = i === current ? ' dot-active' : '';
+    const cls        = isCorrect ? 'dot-ok' : 'dot-nok';
+    return `<span class="dot ${cls}${active}" onclick="jumpTo(${i})" title="Aufgabe ${i + 1}"></span>`;
   }).join('');
 }
 
@@ -127,7 +128,6 @@ function jumpTo(index) {
 // ── Submit & Score ─────────────────────────────────────────────────────────
 
 function submitAll() {
-  if (answers.filter(a => a !== null).length < quizData.questions.length) return;
   submitted = true;
   current   = 0;   // start review from question 1
   render();
