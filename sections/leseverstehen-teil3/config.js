@@ -31,5 +31,19 @@ window.REGISTRY.push({
       quizId:      'leseverstehen-teil3--stadtfuehrer',
       dataFile:    'sections/leseverstehen-teil3/stadtfuehrer/quiz-data.js',
     },
+    {
+      id:          'fernsehen',
+      title:       'FERNSEHEN',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--fernsehen',
+      dataFile:    'sections/leseverstehen-teil3/fernsehen/quiz-data.js',
+    },
+    {
+      id:          'uebersetzungen',
+      title:       'ÜBERSETZUNGEN',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--uebersetzungen',
+      dataFile:    'sections/leseverstehen-teil3/uebersetzungen/quiz-data.js',
+    },
   ],
 });
