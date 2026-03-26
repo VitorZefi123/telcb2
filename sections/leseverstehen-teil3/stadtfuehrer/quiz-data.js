@@ -41,7 +41,7 @@ const QUIZ_DATA = {
     {
       letter: 'D',
       title:  'Echt sizilianisch?',
-      content: 'Genießen wie auf Italiens sonnigster Insel, authentischer geht es nicht: 80 leckere Familienrezepte hat Sella Cascone aus der großen Sammlung ihrer Mutter Maria ausgewählt und in diesem außergewöhnlichen Kochbuch zusammengestellt. Vom Auberginenauflauf Parmegiana Catanese über die weltberühmte Torte Cassata bis zu den typischen Menüs für Familienfeiern und jahreszeitliche Feste hat Cascone das Beste zusammengetragen, was die sizilianische Küche zu bieten hat. Viele Farbfotos machen das Buch zu einem wahren Augenschmaus. Genießen Sie die kulinarische Entdeckungsreise nach Sizilien! Gebundenes Buch, 39 €',
+      content: 'Genießen wie auf Italiens  sonnigster Insel, authentischer geht es nicht: 80 leckere Familienrezepte hat Sella Cascone aus der großen Sammlung ihrer Mutter Maria ausgewählt und in diesem außergewöhnlichen Kochbuch zusammengestellt. Vom Auberginenauflauf Parmegiana Catanese über die weltberühmte Torte Cassata bis zu den typischen Menüs für Familienfeiern und jahreszeitliche Feste hat Cascone das Beste zusammengetragen, was die sizilianische Küche zu bieten hat. Viele Farbfotos machen das Buch zu einem wahren Augenschmaus. Genießen Sie die kulinarische Entdeckungsreise nach Sizilien! Gebundenes Buch, 39 €',
     },
     {
       letter: 'E',
