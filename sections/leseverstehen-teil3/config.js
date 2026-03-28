@@ -73,5 +73,33 @@ window.REGISTRY.push({
       quizId:      'leseverstehen-teil3--kurort',
       dataFile:    'sections/leseverstehen-teil3/kurort/quiz-data.js',
     },
+    {
+      id:          'umzug',
+      title:       'UMZUG',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--umzug',
+      dataFile:    'sections/leseverstehen-teil3/umzug/quiz-data.js',
+    },
+    {
+      id:          'ausfluege',
+      title:       'AUSFLÜGE',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--ausfluege',
+      dataFile:    'sections/leseverstehen-teil3/ausfluege/quiz-data.js',
+    },
+    {
+      id:          'fotokurs',
+      title:       'FOTOKURS',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--fotokurs',
+      dataFile:    'sections/leseverstehen-teil3/fotokurs/quiz-data.js',
+    },
+    {
+      id:          'weihnachten',
+      title:       'WEIHNACHTEN',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--weihnachten',
+      dataFile:    'sections/leseverstehen-teil3/weihnachten/quiz-data.js',
+    },
   ],
 });
