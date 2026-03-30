@@ -108,7 +108,7 @@ const QUIZ_DATA = {
       ],
       correct: 'A',
       explanation:
-        'Der Text sagt: „Schwieriger sei es, die Kinobetreiber vom Film zu überzeugen. ‚Was sollen wir mit einer Kuh?', sei eine häufige Reaktion." Die Kinobetreiber zeigen also wenig Begeisterung. Option B ist falsch (die 500 Filmkritiker waren begeistert). Option C ist falsch (er kam nur in die Auswahl der 15 besten).',
+        `Der Text sagt: „Schwieriger sei es, die Kinobetreiber vom Film zu überzeugen. ‚Was sollen wir mit einer Kuh?', sei eine häufige Reaktion." Die Kinobetreiber zeigen also wenig Begeisterung. Option B ist falsch (die 500 Filmkritiker waren begeistert). Option C ist falsch (er kam nur in die Auswahl der 15 besten).`,
     },
   ],
 };
