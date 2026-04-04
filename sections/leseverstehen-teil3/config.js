@@ -129,5 +129,33 @@ window.REGISTRY.push({
       quizId:      'leseverstehen-teil3--tiere',
       dataFile:    'sections/leseverstehen-teil3/tiere/quiz-data.js',
     },
+    {
+      id:          'schwanger',
+      title:       'SCHWANGER',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--schwanger',
+      dataFile:    'sections/leseverstehen-teil3/schwanger/quiz-data.js',
+    },
+    {
+      id:          'krankheiten',
+      title:       'KRANKHEITEN',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--krankheiten',
+      dataFile:    'sections/leseverstehen-teil3/krankheiten/quiz-data.js',
+    },
+    {
+      id:          'kontakte',
+      title:       'KONTAKTE',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--kontakte',
+      dataFile:    'sections/leseverstehen-teil3/kontakte/quiz-data.js',
+    },
+    {
+      id:          'musik',
+      title:       'MUSIK',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--musik',
+      dataFile:    'sections/leseverstehen-teil3/musik/quiz-data.js',
+    },
   ],
 });
