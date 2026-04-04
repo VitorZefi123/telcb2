@@ -101,5 +101,33 @@ window.REGISTRY.push({
       quizId:      'leseverstehen-teil3--weihnachten',
       dataFile:    'sections/leseverstehen-teil3/weihnachten/quiz-data.js',
     },
+    {
+      id:          'haushaltshilfe',
+      title:       'HAUSHALTSHILFE',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--haushaltshilfe',
+      dataFile:    'sections/leseverstehen-teil3/haushaltshilfe/quiz-data.js',
+    },
+    {
+      id:          'kursprogramm',
+      title:       'KURSPROGRAMM',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--kursprogramm',
+      dataFile:    'sections/leseverstehen-teil3/kursprogramm/quiz-data.js',
+    },
+    {
+      id:          'weinbau',
+      title:       'WEINBAU',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--weinbau',
+      dataFile:    'sections/leseverstehen-teil3/weinbau/quiz-data.js',
+    },
+    {
+      id:          'tiere',
+      title:       'TIERE',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--tiere',
+      dataFile:    'sections/leseverstehen-teil3/tiere/quiz-data.js',
+    },
   ],
 });
