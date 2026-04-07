@@ -157,5 +157,33 @@ window.REGISTRY.push({
       quizId:      'leseverstehen-teil3--musik',
       dataFile:    'sections/leseverstehen-teil3/musik/quiz-data.js',
     },
+    {
+      id:          'hunde',
+      title:       'HUNDE',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--hunde',
+      dataFile:    'sections/leseverstehen-teil3/hunde/quiz-data.js',
+    },
+    {
+      id:          'wohnen',
+      title:       'WOHNEN',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--wohnen',
+      dataFile:    'sections/leseverstehen-teil3/wohnen/quiz-data.js',
+    },
+    {
+      id:          'tierwelt',
+      title:       'TIERWELT',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--tierwelt',
+      dataFile:    'sections/leseverstehen-teil3/tierwelt/quiz-data.js',
+    },
+    {
+      id:          'autos',
+      title:       'AUTOS',
+      description: 'Infotext zuordnen · 10 Situationen',
+      quizId:      'leseverstehen-teil3--autos',
+      dataFile:    'sections/leseverstehen-teil3/autos/quiz-data.js',
+    },
   ],
 });
