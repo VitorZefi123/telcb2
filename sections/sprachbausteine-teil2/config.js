@@ -192,5 +192,26 @@ window.REGISTRY.push({
       quizId:      'sprachbausteine-teil2--was-steckt-bio',
       dataFile:    'sections/sprachbausteine-teil2/was-steckt-bio/quiz-data.js',
     },
+    {
+      id:          'haustiere-kleinkinder',
+      title:       'IST DER UMGANG MIT HAUSTIEREN GESUND FÜR KLEINKINDER?',
+      description: 'Wörter aus dem Kasten zuordnen · 10 Lücken',
+      quizId:      'sprachbausteine-teil2--haustiere-kleinkinder',
+      dataFile:    'sections/sprachbausteine-teil2/haustiere-kleinkinder/quiz-data.js',
+    },
+    {
+      id:          'theater-kinder-jugendliche',
+      title:       'THEATER FÜR KINDER UND JUGENDLICHE',
+      description: 'Wörter aus dem Kasten zuordnen · 10 Lücken',
+      quizId:      'sprachbausteine-teil2--theater-kinder-jugendliche',
+      dataFile:    'sections/sprachbausteine-teil2/theater-kinder-jugendliche/quiz-data.js',
+    },
+    {
+      id:          'klimawandel-braunbaer',
+      title:       'WIE DER KLIMAWANDEL TIERARTEN BEDROHT – DAS BEISPIEL DES BRAUNBÄREN',
+      description: 'Wörter aus dem Kasten zuordnen · 10 Lücken',
+      quizId:      'sprachbausteine-teil2--klimawandel-braunbaer',
+      dataFile:    'sections/sprachbausteine-teil2/klimawandel-braunbaer/quiz-data.js',
+    },
   ],
 });
